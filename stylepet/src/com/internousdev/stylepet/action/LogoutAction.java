@@ -11,10 +11,10 @@ public class LogoutAction extends ActionSupport implements SessionAware{
 	public Map<String,Object> session;
 
 	public String execute(){
-		String loginId =(String)session.get("loginId");
+		String userName =(String)session.get("userName");
 		session.clear();
-		if(loginId!=null){
-			session.put("loginId", loginId);
+		if(userName!=null){
+			session.put("userName", userName);
 		}
 		return SUCCESS;
 	}

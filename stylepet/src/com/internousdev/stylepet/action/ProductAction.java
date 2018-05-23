@@ -15,7 +15,7 @@ import com.opensymphony.xwork2.ActionSupport;
 	
 public class ProductAction extends ActionSupport implements SessionAware{
 		
-private String itemName;
+	private String itemName;
 	
 	private String itemFilePath;
 	

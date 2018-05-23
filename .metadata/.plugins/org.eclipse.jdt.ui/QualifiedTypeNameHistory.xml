@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="javax.swing.plaf.synth.SynthSpinnerUI"/>
+<fullyQualifiedTypeName name="com.internousdev.stylepet.dto.BuyHistoryDTO"/>
+<fullyQualifiedTypeName name="com.internousdev.stylepet.dao.BuyHistoryDAO"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="com.opensymphony.xwork2.ActionSupport"/>
+<fullyQualifiedTypeName name="org.apache.struts2.interceptor.SessionAware"/>
+</qualifiedTypeNameHistroy>

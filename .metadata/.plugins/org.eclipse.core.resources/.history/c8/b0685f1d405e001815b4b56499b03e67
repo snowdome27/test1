@@ -1,0 +1,159 @@
+package com.internousdev.stylepet.action;
+
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Map;
+
+import org.apache.struts2.interceptor.SessionAware;
+
+import com.internousdev.stylepet.dao.BuyHistoryDAO;
+import com.internousdev.stylepet.dto.BuyHistoryDTO;
+import com.opensymphony.xwork2.ActionSupport;
+
+public class BuyHistoryAction extends ActionSupport implements SessionAware{
+	
+	private String userName;
+	private String itemName;
+	private int itemPrice;
+	private String imageFilePath;
+	
+	public Map<String,Object> session;
+	public String deleteFlg;
+	
+	
+	
+	public String excecute() throws SQLException{
+		
+		
+		String result = ERROR;
+		
+		BuyHistoryDAO buyHistoryDAO = new BuyHistoryDAO();
+		
+		ArrayList<BuyHistoryDTO> buyHistoryDTOList = new ArrayList<BuyHistoryDTO>();
+	
+		if(deleteFlg == null){
+			String userName = session.get("userName").toString();
+			
+			buyHistoryDTOList = buyHistoryDAO.getBuyHitoryInfo(userName);
+		
+			session.put("buyHistoryDTOList", buyHistoryDTOList);
+		
+		}else if(deleteFlg.equals("1")){
+			delete();
+		}
+		result = SUCCESS;
+		
+		return result;
+	}
+
+	
+	public void delete() throws SQLException{
+		
+		BuyHistoryDAO buyHdao = new BuyHistoryDAO();
+		
+		String userName = session.get("userName").toString();
+		
+		int res = buyHdao.buyHistoryDelete(userName);
+		
+		if(res>0){
+			session.put("message", "商品履歴を削除しました");
+		}else if(res==0){
+			session.put("message", "商品履歴を削除出来ませんでした");
+		}
+		
+	}
+
+
+
+	
+	
+
+	public String getUserName() {
+		return userName;
+	}
+
+
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+
+
+	public String getDeleteFlg() {
+		return deleteFlg;
+	}
+
+
+	public void setDeleteFlg(String deleteFlg) {
+		this.deleteFlg = deleteFlg;
+	}
+
+
+	public String getItemName() {
+		return itemName;
+	}
+
+
+
+
+
+
+
+	public void setItemName(String itemName) {
+		this.itemName = itemName;
+	}
+
+
+
+
+
+
+
+	public int getItemPrice() {
+		return itemPrice;
+	}
+
+
+
+
+
+
+
+	public void setItemPrice(int itemPrice) {
+		this.itemPrice = itemPrice;
+	}
+
+
+
+
+
+
+
+	public String getImageFilePath() {
+		return imageFilePath;
+	}
+
+
+
+
+
+
+
+	public void setImageFilePath(String imageFilePath) {
+		this.imageFilePath = imageFilePath;
+	}
+
+
+
+
+
+
+
+	@Override
+	public void setSession(Map<String, Object> arg0) {
+		// TODO 自動生成されたメソッド・スタブ
+		
+	}
+
+	
+	
+}

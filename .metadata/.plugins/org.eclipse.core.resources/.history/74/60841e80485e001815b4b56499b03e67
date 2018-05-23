@@ -1,0 +1,45 @@
+package com.internousdev.stylepet.action;
+
+
+import java.sql.SQLException;
+import java.util.Map;
+
+import org.apache.struts2.interceptor.SessionAware;
+
+import com.internousdev.stylepet.dao.BuyHistoryDAO;
+import com.opensymphony.xwork2.ActionSupport;
+
+public class BuyHistoryDeleteAction extends ActionSupport implements SessionAware{
+	
+	public Map<String,Object> session;
+
+	
+	public void delete() throws SQLException{
+		
+		BuyHistoryDAO buyHdao = new BuyHistoryDAO();
+		
+		String userName = session.get("userName").toString();
+		
+		int res = buyHdao.buyHistoryDelete(userName);
+		
+		if(res>0){
+			session.put("message", "商品履歴を削除しました");
+		}else if(res==0){
+			session.put("message", "商品履歴を削除出来ませんでした");
+		}
+		
+		
+		
+		
+	}
+
+
+	public Map<String, Object> getSession() {
+		return session;
+	}
+
+
+	public void setSession(Map<String, Object> session) {
+		this.session = session;
+	}
+}
