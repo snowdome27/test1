@@ -1,0 +1,19 @@
+package com.internousdev.stylepet.dto;
+
+public class UserCinfirmDTO {
+	
+	private String loginId;
+	
+	private String userName;
+	
+	private String userAddress1;
+	
+	private String userAddress2;
+	
+	private String userAddress3;
+	
+	private String userSex;
+	
+	private String userTell;
+
+}

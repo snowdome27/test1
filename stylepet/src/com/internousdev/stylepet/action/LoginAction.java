@@ -4,9 +4,7 @@ import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
 
-import com.internousdev.stylepet.dao.BuyItemDAO;
 import com.internousdev.stylepet.dao.LoginDAO;
-import com.internousdev.stylepet.dto.BuyItemDTO;
 import com.internousdev.stylepet.dto.LoginDTO;
 import com.opensymphony.xwork2.ActionSupport;
 
@@ -18,7 +16,7 @@ public class LoginAction extends ActionSupport implements SessionAware {
 		public Map<String, Object> session;
 		private LoginDAO loginDAO = new LoginDAO();
 		private LoginDTO loginDTO = new LoginDTO();
-		private BuyItemDAO buyItemDAO = new BuyItemDAO();
+		
 
 
 		public String execute() {
@@ -33,7 +31,6 @@ public class LoginAction extends ActionSupport implements SessionAware {
 
 				result = SUCCESS;
 
-				BuyItemDTO buyItemDTO = buyItemDAO.getBuyItemInfo();
 
 				session.put("loginId",loginDTO.getLoginId());
 				session.put("loginPassword", loginDTO.getLoginPassword());
@@ -45,13 +42,6 @@ public class LoginAction extends ActionSupport implements SessionAware {
 				session.put("userSex",loginDTO.getUserSex());
 				session.put("userTell", loginDTO.getUserTell());
 				
-
-				session.put("id", buyItemDTO.getId());
-
-				session.put("buyItem_name", buyItemDTO.getItemName());
-
-				session.put("buyItem_price", buyItemDTO.getItemPrice());
-
 			}
 
 				return result;
@@ -111,15 +101,6 @@ public class LoginAction extends ActionSupport implements SessionAware {
 			this.loginDTO = loginDTO;
 		}
 
-
-		public BuyItemDAO getBuyItemDAO() {
-			return buyItemDAO;
-		}
-
-
-		public void setBuyItemDAO(BuyItemDAO buyItemDAO) {
-			this.buyItemDAO = buyItemDAO;
-		}
 
 
 		public Map<String, Object> getSession() {

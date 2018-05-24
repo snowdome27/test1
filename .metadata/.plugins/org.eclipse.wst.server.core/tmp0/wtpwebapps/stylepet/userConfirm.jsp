@@ -77,67 +77,66 @@ table {
 
 		<div>
 			<table>
-				<s:form action="">
-			
-					<tr id="box">
-						<td>
-							<label>ログインID：</label>
-						</td>
-						<td>
-							<s:property value="#session.loginId" escape="false" />
-						</td>
-					</tr>
-					<tr id="box">
-						<td>
-							<label>ユーザー名：</label>
-						</td>
-						<td>
-							<s:property value="#session.userName" escape="false" />
-						</td>
-					</tr>
-					<tr id="box">
-						<td>
-							<label>性別：</label>
-						</td>
-						<td>
-							<s:property value="#session.userSex" escape="false"/>
-						</td>
-					</tr>
-					<tr id="box">
-						<td>
-							<label>都道府県：</label>
-						</td>
-						<td>
-							<s:property value="session.userAddress1" escape="false"/>
-						</td>
-					</tr>
-					<tr id="box">
-						<td>
-							<label>市町村：</label>
-						</td>
-						<td>
-							<s:property value="session.userAddress2" escape="false"/>
-						</td>
-					</tr>
-					<tr id="box">
-						<td>
-							<label>マンション名・番地：</label>
-						</td>
-						<td>
-							<s:property value="session.userAddress3" escape="false"/>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<label>電話番号：</label>
-						</td>
-						<td>
-							<s:property value="#ssession.userTell" escape="false"/>
-						</td>
-					</tr>
+					<s:form action="UserUpDateConfirmAction">
 				
-							<s:submit value="変更" />
-				</s:form>
+						<tr id="box">
+							<td>
+								<label>ログインID：</label>
+							</td>
+							<td>
+								<s:property value="session.loginId" escape="false" />
+							</td>
+						</tr>
+						<tr id="box">
+							<td>
+								<label>ユーザー名：</label>
+							</td>
+							<td>
+								<s:property value="#session.userName" escape="false" />
+							</td>
+						</tr>
+						<tr id="box">
+							<td>
+								<label>性別：</label>
+							</td>
+							<td>
+								<s:property value="#session.userSex" escape="false"/>
+							</td>
+						</tr>
+						<tr id="box">
+							<td>
+								<label>都道府県：</label>
+							</td>
+							<td>
+								<s:property value="#session.userAddress1" escape="false"/>
+							</td>
+						</tr>
+						<tr id="box">
+							<td>
+								<label>市町村：</label>
+							</td>
+							<td>
+								<s:property value="#session.userAddress2" escape="false"/>
+							</td>
+						</tr>
+						<tr id="box">
+							<td>
+								<label>マンション名・番地：</label>
+							</td>
+							<td>
+								<s:property value="#session.userAddress3" escape="false"/>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label>電話番号：</label>
+							</td>
+							<td>
+								<s:property value="#session.userTell" escape="false"/>
+							</td>
+						</tr>
+						<s:submit value="変更" />
+					</s:form>
 			</table>
 		</div>
 	</div>

@@ -4,7 +4,7 @@ package com.internousdev.stylepet.dto;
 	public class LoginDTO {
 
 		private String loginId;
-		private String loginPassword;
+		private String loginPass;
 		private String userName;
 		private String userAddress;
 		private String userAddress1;
@@ -83,15 +83,15 @@ package com.internousdev.stylepet.dto;
 		}
 
 		public void setLoginId(String loginPassword){
-			this.loginPassword=loginPassword;
+			this.loginPass=loginPassword;
 		}
 
 		public String getLoginPassword(){
-			return loginPassword;
+			return loginPass;
 		}
 
 		public void setLoginPassword(String loginPassword){
-			this.loginPassword=loginPassword;
+			this.loginPass=loginPassword;
 		}
 
 		public String getUserName(){

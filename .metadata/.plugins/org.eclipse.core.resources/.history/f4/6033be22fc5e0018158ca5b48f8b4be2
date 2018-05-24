@@ -1,0 +1,5 @@
+package com.internousdev.stylepet.dao;
+
+public class UserUpDateDAO {
+
+}

@@ -19,19 +19,6 @@
 		</s:if>
 	<br>
 
-	<table>
-		<tbody>
-			<tr>
-				<th>USERNAME</th>
-				<th>PASSWORD</th>
-			</tr>
-			<tr>
-				<s:iterator value="#session.loginDTOList">
-				<td><s:property value="username"/></td>
-				<td><s:property value="password"/></td>
-				</s:iterator>
-			</tr>
-		</tbody>
-	</table>
+	<a href='<s:url action="GoHomeAction"/>'>HOMEに戻る</a>
 </body>
 </html>

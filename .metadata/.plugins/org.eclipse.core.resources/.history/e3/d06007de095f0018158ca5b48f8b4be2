@@ -1,0 +1,96 @@
+package com.internousdev.stylepet.action;
+
+
+
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Map;
+
+import org.apache.struts2.interceptor.SessionAware;
+
+import com.internousdev.stylepet.dao.UserUpDateDAO;
+import com.internousdev.stylepet.dto.UserUpDateDTO;
+import com.opensymphony.xwork2.ActionSupport;
+
+
+
+public class UserUpDateAction extends ActionSupport implements SessionAware{
+	
+	private String loginId;
+	private String loginPass;
+	public Map<String,Object> session;
+	
+	
+	public  String execute() throws SQLException{
+		
+		UserUpDateDAO userDAO = new UserUpDateDAO();
+		UserUpDateDTO user = new UserUpDateDTO();
+		
+		String result = ERROR;
+		
+		user = userDAO.getUserUpDate(loginId, loginPass); 
+		
+		session.put("loginId", user.getLoginId());
+		session.put("userName", user.getUserName());
+		session.put("userAddress1", user.getUserAddress1());
+		session.put("userAddress2", user.getUserAddress2());
+		session.put("userAddress3", user.getUserAddress3());
+		session.put("userTell", user.getUserTell());
+		session.put("userSex", user.getUserSex());
+		
+		
+		
+		
+		return result;
+		
+		
+	}
+	
+	
+	
+
+
+	public String getLoginId() {
+		return loginId;
+	}
+
+
+
+
+
+	public void setLoginId(String loginId) {
+		this.loginId = loginId;
+	}
+
+
+
+
+
+	public String getLoginPass() {
+		return loginPass;
+	}
+
+
+
+
+
+	public void setLoginPass(String loginPass) {
+		this.loginPass = loginPass;
+	}
+
+
+
+
+
+	@Override
+	public void setSession(Map<String, Object> arg0) {
+		// TODO 自動生成されたメソッド・スタブ
+		
+	}
+	
+	
+	
+	
+	
+
+}
