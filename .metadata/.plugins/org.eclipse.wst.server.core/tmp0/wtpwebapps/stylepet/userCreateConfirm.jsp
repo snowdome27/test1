@@ -10,7 +10,7 @@ pageEncoding="UTF-8"%>
 <meta http-equiv="imagetoolbar" content="no" />
 <meta name="description" content="" />
 <meta name="keywords" content="" />
-<title>UserCreateConfirm画面</title>
+<title>登録確認画面</title>
 <style type="text/css">
 
 

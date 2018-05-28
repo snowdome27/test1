@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+<constant name="struts.devMode" value="true"/>
+
+<package name="com.internousdev.stylepet.action" extends="struts-default">
+
+	<!-- GoHomeAction HOME画面に戻る-->
+	<action name="GoHomeAction" method="execute" class="com.internousdev.stylepet.action.GoHomeAction">
+		<result name="success">top.jsp</result>
+	</action>
+
+	<!-- GoLoginAction Login画面に戻る-->
+	<action name="GoLoginAction" class="com.internousdev.stylepet.action.GoLoginAction" method="execute">
+		<result name="success">login.jsp</result>
+	</action>
+
+	<!-- HomeAction -->
+	<action name="HomeAction" class="com.internousdev.stylepet.action.HomeAction" method="execute">
+		<result name="login">login.jsp</result>
+		<result name="success">home.jsp</result>
+	</action>
+
+	<!-- LoginAction -->
+	<action name="LoginAction" class="com.internousdev.stylepet.action.LoginAction" method="execute">
+		<result name="success">home.jsp</result>
+		<result name="error">loginError.jsp</result>
+	</action>
+
+	<!-- UserCreateAction -->
+	<action name="UserCreateAction" class="com.internousdev.stylepet.action.UserCreateAction" method="execute">
+		<result name="success">userCreate.jsp</result>
+		<result name="error">login.jsp</result>
+	</action>
+
+	<!-- UserCreateConfirmAction -->
+	<action name="UserCreateConfirmAction" class="com.internousdev.stylepet.action.UserCreateConfirmAction" method="execute">
+		<result name="success">userCreateConfirm.jsp</result>
+		<result name="error">userCreate.jsp</result>
+	</action>
+
+	<!-- UserCreateCompleteAction -->
+	<action name="UserCreateCompleteAction" class="com.internousdev.stylepet.action.UserCreateCompleteAction" method="execute">
+		<result name="success">userCreateComplete.jsp</result>
+	</action>
+
+	<!-- InquiryAction お問い合わせ -->
+	<action name="InquiryAction" class="com.internousdev.stylepet.action.InquiryAction" method="execute">
+		<result name="success">inquiry.jsp</result>
+	</action>
+
+	<!-- InquiryCompleteAction -->
+	<action name="InquiryCompleteAction" class="com.internousdev.stylepet.action.InquiryCompleteAction" method="execute">
+		<result name="success">inquiryComplete.jsp</result>
+		<result name="error">inquiryCompleteError.jsp</result>
+	</action>
+	
+	
+	<!-- ProductAction -->
+	<action name="ProductAction" class="com.internousdev.stylepet.action.ProductAction" method="execute">
+		<result name="success">product.jsp</result>
+	</action>
+	
+	<!-- ProductDateAction -->
+	<action name="ProductDateAction" class="com.internousdev.stylepet.action.ProductDateAction" method="execute">
+		<result name="success">productDate.jsp</result>
+		<result name="error">product.jsp</result>
+	</action>
+	
+	
+	<!-- BuyConfirm -->
+	<action name="BuyConfirmAction" class="com.internousdev.stylepet.action.BuyConfirmAction" method="execute">
+		<result name="success">buyConfirm.jsp</result>
+		<result name="login">login.jsp</result>
+	</action>
+	
+	<!-- BuyProductCompleteAction -->
+	<action name="BuyProductCompleteAction" class="com.internousdev.stylepet.action.BuyProductCompleteAction" method="execute">
+		<result name="success">buyProductComplete.jsp</result>
+		<result name="error">error.jsp</result>		
+	</action>
+	
+	<!-- MyPageAction  -->
+	<action name="MyPageAction" class="com.internousdev.stylepet.action.MyPageAction" method="execute">
+		<result name="success">myPage.jsp</result>
+	</action>
+	
+	<!-- BuyHistoryAction -->
+	<action name="BuyHistoryAction" class="com.internousdev.stylepet.action.BuyHistoryAction" method="execute">
+		<result name="success">buyHistory.jsp</result>
+		<result name="error">error.jsp</result>
+	</action>
+	
+	<!-- LogoutAction -->
+	<action name="LogoutAction" class="com.internousdev.stylepet.action.LogoutAction" method="execute">
+		<result name="success">logout.jsp</result>
+	</action>
+	
+	<!-- UserConfirmAction -->
+	<action name="UserConfirmAction" class="com.internousdev.stylepet.action.UserConfirmAction" method="execute">
+		<result name="success">userConfirm.jsp</result>
+	</action>
+	
+	<!-- UserUpDateAction -->
+	<action name="UserUpDateAction" class="com.internousdev.stylepet.action.UserUpDateAction" method="execute">
+		<result name="success">userUpDate.jsp</result>
+	</action>
+
+
+
+
+	</package>
+	</struts>

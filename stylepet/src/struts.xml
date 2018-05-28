@@ -29,6 +29,7 @@
 	<action name="LoginAction" class="com.internousdev.stylepet.action.LoginAction" method="execute">
 		<result name="success">home.jsp</result>
 		<result name="error">loginError.jsp</result>
+		<result name="master">master.jsp</result>
 	</action>
 
 	<!-- UserCreateAction -->
@@ -105,13 +106,19 @@
 		<result name="success">userConfirm.jsp</result>
 	</action>
 	
-	<!-- UserUpDateAction -->
-	<action name="UserUpDateAction" class="com.internousdev.stylepet.action.UserUpDateAction" method="execute">
-		<result name="success">userUpDate.jsp</result>
+	<!-- UserUpDateCreateAction -->
+	<action name="UserUpDateCreateAction" class="com.internousdev.stylepet.action.UserUpDateCreateAction" method="execute">
+		<result name="success">userUpDateCreate.jsp</result>
 	</action>
+	
+	<!-- UserUpDateCompleteAction -->
+	<action name="UserUpDateCompleteAction" class="com.internousdev.stylepet.action.UserUpDateCompleteAction" method="execute">
+		<result name="success">userUpDateComplete.jsp</result>
+		<result name="error">error.jsp</result>
+	</action>
+	
+	
 
-
-
-
+	
 	</package>
 	</struts>

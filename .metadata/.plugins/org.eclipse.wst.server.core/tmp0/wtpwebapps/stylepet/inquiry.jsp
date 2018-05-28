@@ -54,6 +54,6 @@ img{
 		</s:form>
 	</div>
 
-	<img src="./image/dog6.jpg" width="300px">
+	<img src="./image/dog5.jpg" width="300px">
 </body>
 </html>

@@ -10,7 +10,7 @@ pageEncoding="UTF-8"%>
 <meta http-equiv="imagetoolbar" content="no" />
 <meta name="description" content="" />
 <meta name="keywords" content="" />
-<title>UserCreateConfirm画面</title>
+<title>ユーザー情報確認画面</title>
 <style type="text/css">
 
 
@@ -77,7 +77,7 @@ table {
 
 		<div>
 			<table>
-					<s:form action="UserUpDateConfirmAction">
+					<s:form action="UserUpDateCreateAction">
 				
 						<tr id="box">
 							<td>

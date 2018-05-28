@@ -58,11 +58,23 @@ create table inquiry(
 	body varchar(255)
 	);
 
-
+/*　商品情報　*/
 INSERT INTO item_info_transaction(item_name, item_price, item_stock,image_file_path,image_file_name)
 VALUES("cart",9000,50,"./image/cart.jpg","cart"),
-		("lead",5000,10,"./image/lead.jpg","lead");
+		("lead",5000,10,"./image/lead.jpg","lead"),
+		("clothes",4000,10,"./image/clothes.jpg","clothes"),
+		("clothes2",5000,10,"./image/clothes2.jpg","clothes2"),
+		("clothes3",6000,10,"./image/clothes3.jpg","clothes3"),
+		("bag",7000,10,"./image/bag.jpg","bag"),
+		("carry2",7000,10,"./image/carry2.jpg","carry2"),
+		("cage",10000,5,"./image/cage.jpg","cage"),
+		("cage2",9000,5,"./image/cage2.jpg","cage2");
 		
+		
+		
+		
+		
+/*　ログイン情報　*/
 INSERT INTO login_user_transaction(login_id, login_pass, user_name, user_address, user_address1, user_address2, user_address3, user_sex, user_tell) VALUES
 ("jiro", "456", "test","saitama","kita","nishi","30","男","09000000000"),
 ("taro","123","master","tokyo","minami","higashi","50","男","08000000000");

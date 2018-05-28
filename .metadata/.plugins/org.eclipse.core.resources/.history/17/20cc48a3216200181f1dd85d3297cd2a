@@ -1,0 +1,85 @@
+set names utf8;
+set foreign_key_checks = 0;
+drop database if exists ecsite;
+
+create database if not exists ecsite;
+use ecsite;
+
+/*　ログイン情報　*/
+drop table if exists login_user_transaction;
+create table login_user_transaction(
+id int not null primary key auto_increment,
+login_id varchar(16) unique,
+login_pass varchar(16),
+user_name varchar(50),
+user_address varchar(50),
+user_address1 varchar(50),
+user_address2 varchar(50),
+user_address3 varchar(50),
+user_sex varchar(50),
+user_tell varchar(16),
+insert_date datetime,
+updated_date datetime
+);
+
+/*　アイテム情報　*/
+drop table if exists item_info_transaction;
+create table item_info_transaction(
+	id int not null primary key auto_increment,
+	item_name varchar(30),
+	item_price int,
+	item_stock int,
+	image_file_path varchar(100),
+	image_file_name varchar(100),
+	insert_date datetime,
+	update_date datetime
+);
+
+/*　商品購入履歴　*/
+drop table if exists user_buy_product_transaction;
+create table user_buy_product_transaction(
+	id int not null primary key auto_increment,
+	user_name varchar(50),
+	user_address1 varchar(50),
+	user_address2 varchar(50),
+	user_address3 varchar(50),
+	user_tell varchar(16),
+	item_name varchar(30),
+	item_price int,
+	image_file_path varchar(100),
+	insert_date datetime
+);
+
+/*　お問い合わせ　*/
+drop table if exists inquiry;
+create table inquiry(
+	name varchar(255),
+	qtype varchar(255),
+	body varchar(255)
+	);
+
+/*　商品情報　*/
+INSERT INTO item_info_transaction(item_name, item_price, item_stock,image_file_path,image_file_name)
+VALUES("cart",9000,50,"./image/cart.jpg","cart"),
+		("lead",5000,10,"./image/lead.jpg","lead"),
+		("clothes",4000,10,"./image/clothes.jsp","clothes"),
+		("clothes2",5000,10,"./image/clothes2.jsp","clothes2"),
+		("clothes3",6000,10,"./image/clothes3.jsp","clothes3"),
+		("bag",7000,10,"./image/bag.jpg","bag"),
+		("carry2",7000,10,"./image/carry2.jpg","carry2"),
+		("cage",10000,5,"./image/cage.jpg","cage"),
+		("cage2",9000,5,"./image/cage2.jpg","cage2");
+		
+		
+		
+		
+		
+/*　ログイン情報　*/
+INSERT INTO login_user_transaction(login_id, login_pass, user_name, user_address, user_address1, user_address2, user_address3, user_sex, user_tell) VALUES
+("jiro", "456", "test","saitama","kita","nishi","30","男","09000000000"),
+("taro","123","master","tokyo","minami","higashi","50","男","08000000000");
+
+
+
+
+

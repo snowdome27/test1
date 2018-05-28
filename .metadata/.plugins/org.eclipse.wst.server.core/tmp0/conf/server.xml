@@ -124,7 +124,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="C:\Users\internousdev\Desktop\workspace\workspace-yoshida\test1\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\Users\internousdev\Desktop\workspace\workspace-yoshida\test1\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\stylepet" path="/stylepet" reloadable="true" source="org.eclipse.jst.jee.server:stylepet"/></Host>
+      <Context docBase="C:\Users\internousdev\Desktop\workspace\workspace-yoshida\test1\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\Users\internousdev\Desktop\workspace\workspace-yoshida\test1\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\stylepet" path="/stylepet" reloadable="true" source="org.eclipse.jst.jee.server:stylepet"/><Context docBase="C:\Users\internousdev\Desktop\workspace\workspace-yoshida\test1\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\myec" path="/MyEc" reloadable="true" source="org.eclipse.jst.jee.server:myec"/></Host>
     </Engine>
   </Service>
 </Server>
