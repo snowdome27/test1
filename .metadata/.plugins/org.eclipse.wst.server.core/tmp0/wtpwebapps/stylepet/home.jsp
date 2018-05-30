@@ -11,25 +11,9 @@
 <meta name="description" content="" />
 <meta name="keywords" content="" />
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-
-  <script>
-    $(document).ready(function(){
-      $('.slider').bxSlider();
-    });
-
-
-      $(document).ready(function(){
-          $('.abc').bxSlider({
-              auto:true,
-              mode:'fade',
-              speed:1000,
-              slideWidth:800
-          });
-      });
-        </script>
 
 
 <title>style.PET</title>
@@ -38,69 +22,120 @@
 
 
 
-header{
+.header{
     width: 100%;
-    height: 130px;
-    background-color: black;
+    height: 30px;
+    background-color: #A9A9A9;
     color: white;
 }
 
-header h1{
-    margin: 10px;
+.header h1{
+    padding-top:20px;
+    padding-left:40px;
+    font-size:50px;
+    color:white;
 }
 
-header li{
+.header li{
     float: right;
-    margin: 20px;
+    margin: 30px;
     font-size: 20px;
+    list-style-type:none;
 
 }
 
-div.abc{
-	text-align: center;
-	background-color:black;
+.line{
+	width:100%;
+	background-color:white;
+	}
+
+.main{
+
+	background-color: #A9A9A9;
+	width:100%;
+	height:900px;
+	}
+
+.image{
+	float:left;
+	display:inline-block;
+	padding-left: 40px;
+	padding-top:100px;
+	width : 30%;
+}
+
+
+.item{
+	display:inline-block;
+	float:left;
+	margin-left:100px;
+	margin-top:100px;
 	}
 
 footer{
     width: 100%;
-    height: 100px;
-    background-color: black;
+    height: 40px;
+    background-color:#A9A9A9;
 }
+
+footer p{
+	text-align:center;
+	padding-top:10px;
+	}
 
 </style>
 
 
 </head>
 <body>
-
-	<header>
+		
+		<div class="header">
 
             <h1>style.PET</h1>
             
+            <div class="line"> </div>
+            
             <ul>
-            	<li><a href='<s:url action="InquiryAction"/>'>お問い合わせ</a></li>
-            	<li><a href='<s:url action="LogoutAction"/>'>ログアウト</a></li>
-            	<li><a href='<s:url action="MyPageAction"/>'>マイページ</a></li>
-                <li><a href='<s:url action="GoLoginAction" />'>ログイン</a></li>
-                <li><a href='<s:url action="ProductAction"/>'>商品一覧</a></li>
+            	<li><a href='<s:url action="InquiryAction"/>'>INQUIRY</a></li>
+            	<li><a href='<s:url action="LogoutAction"/>'>LOGOUT</a></li>
+            	<li><a href='<s:url action="MyPageAction"/>'>MYPAGE</a></li>
+                <li><a href='<s:url action="GoLoginAction" />'>LOGIN</a></li>
+                <li><a href='<s:url action="ProductAction"/>'>PRODUCT</a></li>
                 <li><a href='<s:url action="GoHomeAction"/>'>HOME</a></li>
-                <li>ようこそ　<s:property value="#session.userName"/> さん</li>
+                <li>HELLO!<s:property value="#session.userName"/></li>
             </ul>
 
-        </header>
-
-        	<div class="abc">
-			    <div><img src="./image/dog4.jpg" width="800"></div>
-			    <div><img src="./image/dog3.jpg" width="800"></div>
-      			<div><img src="./image/dog2.jpg" width="800"></div>
-  			</div>
-
-
-
+       </div>
+        
+        <div class="main">
+        
+        	<div class="image">
+        		<img alt="" src="./image/dog12.jpg">
+        	</div>
+        	
+        	<div class="product">
+        		<s:iterator value="#session.ProductDTOList">
+					<s:form action="ProductDateAction">
+						<br>
+							<div class="item">
+							<a href='<s:url action="ProductDateAction">
+								<s:param name="itemName" value="%{itemName}"/>
+								<s:param name="imageFilePath" value="%{imageFilePath}" />											
+								<s:param name="imageFileName" value="%{imageFileName}" />
+								<s:param name="itemPrice" value="%{itemPrice}"/>			
+								</s:url>'>
+								
+								<img src='<s:property value="%{imageFilePath}"/>' width="130">
+							</a>
+							</div>
+					</s:form>
+				</s:iterator>
+        	</div>
+        </div>
 
 
         <footer>
-
+			<p>style.PET</p>
         </footer>
 
 

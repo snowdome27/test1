@@ -11,7 +11,7 @@
 
 	<!-- GoHomeAction HOME画面に戻る-->
 	<action name="GoHomeAction" method="execute" class="com.internousdev.stylepet.action.GoHomeAction">
-		<result name="success">top.jsp</result>
+		<result name="success">top3.jsp</result>
 	</action>
 
 	<!-- GoLoginAction Login画面に戻る-->

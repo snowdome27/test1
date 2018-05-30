@@ -1,0 +1,317 @@
+package com.internousdev.stylepet.action;
+
+import java.sql.SQLException;
+import java.util.Map;
+
+import org.apache.struts2.interceptor.SessionAware;
+
+import com.opensymphony.xwork2.ActionSupport;
+
+public class UserUpDateCompleteAction2 extends ActionSupport implements SessionAware{
+	
+	private String loginId;
+
+	private String checkLoginId;
+
+	private String loginPass;
+
+	private String checkPass;
+
+	private String userName;
+	
+	private String userAddress;
+
+	private String userAddress1;
+
+	private String userAddress2;
+
+	private String userAddress3;
+
+	private String userSex;
+
+	private String userTell;
+
+	public Map<String,Object> session;
+	
+	public String execute() throws SQLException{
+		
+		String result=ERROR;
+		
+		
+		
+		
+		
+		
+		
+		
+		return result;
+		
+	}
+
+	
+	
+	
+	
+	
+	
+
+	public String getLoginId() {
+		return loginId;
+	}
+
+
+
+
+
+
+
+
+	public void setLoginId(String loginId) {
+		this.loginId = loginId;
+	}
+
+
+
+
+
+
+
+
+	public String getCheckLoginId() {
+		return checkLoginId;
+	}
+
+
+
+
+
+
+
+
+	public void setCheckLoginId(String checkLoginId) {
+		this.checkLoginId = checkLoginId;
+	}
+
+
+
+
+
+
+
+
+	public String getLoginPass() {
+		return loginPass;
+	}
+
+
+
+
+
+
+
+
+	public void setLoginPass(String loginPass) {
+		this.loginPass = loginPass;
+	}
+
+
+
+
+
+
+
+
+	public String getCheckPass() {
+		return checkPass;
+	}
+
+
+
+
+
+
+
+
+	public void setCheckPass(String checkPass) {
+		this.checkPass = checkPass;
+	}
+
+
+
+
+
+
+
+
+	public String getUserName() {
+		return userName;
+	}
+
+
+
+
+
+
+
+
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+
+
+
+
+
+
+
+
+	public String getUserAddress() {
+		return userAddress;
+	}
+
+
+
+
+
+
+
+
+	public void setUserAddress(String userAddress) {
+		this.userAddress = userAddress;
+	}
+
+
+
+
+
+
+
+
+	public String getUserAddress1() {
+		return userAddress1;
+	}
+
+
+
+
+
+
+
+
+	public void setUserAddress1(String userAddress1) {
+		this.userAddress1 = userAddress1;
+	}
+
+
+
+
+
+
+
+
+	public String getUserAddress2() {
+		return userAddress2;
+	}
+
+
+
+
+
+
+
+
+	public void setUserAddress2(String userAddress2) {
+		this.userAddress2 = userAddress2;
+	}
+
+
+
+
+
+
+
+
+	public String getUserAddress3() {
+		return userAddress3;
+	}
+
+
+
+
+
+
+
+
+	public void setUserAddress3(String userAddress3) {
+		this.userAddress3 = userAddress3;
+	}
+
+
+
+
+
+
+
+
+	public String getUserSex() {
+		return userSex;
+	}
+
+
+
+
+
+
+
+
+	public void setUserSex(String userSex) {
+		this.userSex = userSex;
+	}
+
+
+
+
+
+
+
+
+	public String getUserTell() {
+		return userTell;
+	}
+
+
+
+
+
+
+
+
+	public void setUserTell(String userTell) {
+		this.userTell = userTell;
+	}
+
+
+
+
+
+
+
+
+	public Map<String, Object> getSession() {
+		return session;
+	}
+
+
+
+
+
+
+
+
+	@Override
+	public void setSession(Map<String, Object> arg0) {
+		// TODO 自動生成されたメソッド・スタブ
+		
+	}
+
+}

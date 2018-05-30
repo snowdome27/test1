@@ -1,0 +1,12 @@
+package com.internousdev.stylepet.util;
+
+
+import com.internousdev.stylepet.dto.PaginationDTO;
+
+public class Pagenaion {
+	
+	public ArrayList<ArratyList<ProductDTO>>pagenate_old(List<ProductDTO>productDTOList,int pageNumber)
+	
+	
+
+}

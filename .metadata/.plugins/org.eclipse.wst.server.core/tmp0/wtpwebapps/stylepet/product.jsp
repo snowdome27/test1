@@ -15,10 +15,12 @@
 .list-item{
 	  text-align:none;
 	boder:;
-
 }
-	
+
+.item{
+	float:left;	
 	}
+	
 </style>
 
 <title>商品一覧</title>
@@ -28,7 +30,7 @@
 		<jsp:include page="header.jsp" />
 	</header>
 
-	<div>
+	<div class="item">
 		<s:iterator value="#session.ProductDTOList">
 			<s:form action="ProductDateAction">
 				<br>

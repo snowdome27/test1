@@ -72,7 +72,7 @@ table {
 				<h3><s:property value="errorMassage" escape="false" /></h3>
 			</s:if>
 			<table>
-			<s:form action="">
+			<s:form action="UserUpDateCompleteAction">
 				<tr>
 					<td>
 						<label>ログインID (メールアドレス):</label>

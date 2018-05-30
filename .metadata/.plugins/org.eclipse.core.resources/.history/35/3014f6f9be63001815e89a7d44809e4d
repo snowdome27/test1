@@ -1,0 +1,21 @@
+package com.internousdev.stylepet.util;
+
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.internousdev.stylepet.dto.ProductDTO;
+
+public class Pagenaion {
+	
+	public ArrayList<ArrayList<ProductDTO>>pagenate_old(List<ProductDTO>productDTOList,int pageNumber){
+		
+		
+		
+		return null;
+		
+	}
+	
+	
+
+}

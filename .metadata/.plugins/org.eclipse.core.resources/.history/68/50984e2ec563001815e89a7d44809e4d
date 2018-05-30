@@ -1,0 +1,34 @@
+package com.internousdev.stylepet.util;
+
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.internousdev.stylepet.dto.ProductDTO;
+
+public class Pagenation {
+	
+	public ArrayList<ArrayList<ProductDTO>>pagenate_old(List<ProductDTO>productDTOList,int pageNumber){
+		
+		
+		int erementNumber = 0;
+		
+		ArrayList<ArrayList<ProductDTO>>list = new ArrayList<>();
+		list.add(new ArrayList<ProductDTO>());
+		
+		for(int page = 1; page<=productDTOList.size();page++){
+			list.get(erementNumber).add(productDTOList.get(page -1));
+				
+			if(page % 6 == 0 && page !=0){
+				erementNumber++;
+				list.add(new ArrayList<ProductDTO>());
+			}
+		}
+		System.out.println(list);
+		return null;
+		
+	}
+	
+	
+
+}

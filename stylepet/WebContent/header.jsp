@@ -41,7 +41,7 @@
 header{
     width: 100%;
     height: 110px;
-    background-color: black;
+    background-color: #A9A9A9;
     color: white;
 }
 
@@ -53,13 +53,9 @@ header li{
     float: right;
     margin: 20px;
     font-size: 20px;
+    list-style-type:none;
 
 }
-
-div.abc{
-	text-align: center;
-	background-color:black;
-	}
 
 footer{
     width: 100%;
@@ -77,13 +73,13 @@ footer{
             <h1>style.PET</h1>
             
             <ul>
-            	<li><a href='<s:url action="InquiryAction"/>'>お問い合わせ</a></li>
-            	<li><a href='<s:url action="LogoutAction"/>'>ログアウト</a></li>
-            	<li><a href='<s:url action="MyPageAction"/>'>マイページ</a></li>
-                <li><a href='<s:url action="GoLoginAction" />'>ログイン</a></li>
-                <li><a href='<s:url action="ProductAction"/>'>商品一覧</a></li>
+            	<li><a href='<s:url action="InquiryAction"/>'>INQUIRY</a></li>
+            	<li><a href='<s:url action="LogoutAction"/>'>LOGOUT</a></li>
+            	<li><a href='<s:url action="MyPageAction"/>'>MYPAGE</a></li>
+                <li><a href='<s:url action="GoLoginAction" />'>LOGIN</a></li>
+                <li><a href='<s:url action="ProductAction"/>'>PRODUCT</a></li>
                 <li><a href='<s:url action="GoHomeAction"/>'>HOME</a></li>
-                <li><s:property value="#session.userName"/> さん</li>
+                <li>user:<s:property value="#session.userName"/></li>
             </ul>
 
         </header>

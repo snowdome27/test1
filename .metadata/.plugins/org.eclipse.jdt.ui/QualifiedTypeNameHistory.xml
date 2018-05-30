@@ -9,8 +9,8 @@
 <fullyQualifiedTypeName name="com.internousdev.stylepet.dto.UserUpDateDTO"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="com.internousdev.stylepet.dao.UserUpDateDAO"/>
+<fullyQualifiedTypeName name="com.internousdev.stylepet.dto.LoginDTO"/>
 <fullyQualifiedTypeName name="org.apache.struts2.interceptor.SessionAware"/>
 <fullyQualifiedTypeName name="com.opensymphony.xwork2.ActionSupport"/>
 <fullyQualifiedTypeName name="java.sql.SQLException"/>
-<fullyQualifiedTypeName name="com.internousdev.stylepet.dto.LoginDTO"/>
 </qualifiedTypeNameHistroy>
