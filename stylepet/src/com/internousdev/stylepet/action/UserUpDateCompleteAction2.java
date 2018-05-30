@@ -39,11 +39,13 @@ public class UserUpDateCompleteAction2 extends ActionSupport implements SessionA
 		
 		session.put("loginId", loginId);
 		session.put("userName", userName);
-		session.put("userAddress", userAddress)
+		session.put("userAddress1", userAddress1);
+		session.put("userAddress2", userAddress2);
+		session.put("userAddress3", userAddress3);
+		session.put("userSex", userSex);
+		session.put("userTell", userTell);
 		
-		
-		
-		
+		result=SUCCESS;
 		
 		
 		return result;

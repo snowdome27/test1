@@ -21,66 +21,80 @@
 <style type="text/css">
 
 
-
-.header{
+header {
+	margin:0px;
     width: 100%;
-    height: 30px;
-    background-color: #A9A9A9;
+    height: 150px;
+    background-color: black;
     color: white;
 }
 
-.header h1{
-    padding-top:20px;
-    padding-left:40px;
-    font-size:50px;
+header h1{
+    font-size:40px;
     color:white;
+    padding-left:20px;
+    padding-top:10px;
 }
 
-.header li{
+header ul {
     float: right;
-    margin: 30px;
-    font-size: 20px;
-    list-style-type:none;
-
 }
 
-.line{
-	width:100%;
-	background-color:white;
-	}
+header ul li{
+	float:right;
+	margin-left:60px;
+	margin-right:30px;
+	font-size:20px;
+	list-style:none;
+}
+
 
 .main{
-
+	margin-top:30px;
 	background-color: #A9A9A9;
 	width:100%;
 	height:900px;
 	}
-
+	
 .image{
-	float:left;
 	display:inline-block;
-	padding-left: 40px;
-	padding-top:100px;
-	width : 30%;
+	float:left;
+	margin:30px;
+	}
+	
+	
+	
+.product{
+	margin:0px;
+	float:right;
+	width:60%;
+	height:704px;
+	}
+
+
+
+.box{
+	display:inline-block;
+	float:left;
+	margin:0px;
+	
 }
 
-
 .item{
-	display:inline-block;
 	float:left;
-	margin-left:100px;
-	margin-top:100px;
+	margin:35px;
 	}
 
 footer{
     width: 100%;
     height: 40px;
-    background-color:#A9A9A9;
+    background-color:black;
 }
 
 footer p{
 	text-align:center;
 	padding-top:10px;
+	color:white;
 	}
 
 </style>
@@ -89,23 +103,19 @@ footer p{
 </head>
 <body>
 		
-		<div class="header">
+		<header>
 
             <h1>style.PET</h1>
             
-            <div class="line"> </div>
             
             <ul>
             	<li><a href='<s:url action="InquiryAction"/>'>INQUIRY</a></li>
-            	<li><a href='<s:url action="LogoutAction"/>'>LOGOUT</a></li>
-            	<li><a href='<s:url action="MyPageAction"/>'>MYPAGE</a></li>
                 <li><a href='<s:url action="GoLoginAction" />'>LOGIN</a></li>
                 <li><a href='<s:url action="ProductAction"/>'>PRODUCT</a></li>
                 <li><a href='<s:url action="GoHomeAction"/>'>HOME</a></li>
-                <li>HELLO!<s:property value="#session.userName"/></li>
             </ul>
 
-       </div>
+       </header>
         
         <div class="main">
         
@@ -114,19 +124,21 @@ footer p{
         	</div>
         	
         	<div class="product">
-        		<s:iterator value="#session.ProductDTOList">
+        		<s:iterator value="#session.productDTOList">
 					<s:form action="ProductDateAction">
 						<br>
-							<div class="item">
-							<a href='<s:url action="ProductDateAction">
-								<s:param name="itemName" value="%{itemName}"/>
-								<s:param name="imageFilePath" value="%{imageFilePath}" />											
-								<s:param name="imageFileName" value="%{imageFileName}" />
-								<s:param name="itemPrice" value="%{itemPrice}"/>			
-								</s:url>'>
-								
-								<img src='<s:property value="%{imageFilePath}"/>' width="130">
-							</a>
+							<div class="box">
+								<div class="item">
+								<a href='<s:url action="ProductDateAction">
+									<s:param name="itemName" value="%{itemName}"/>
+									<s:param name="imageFilePath" value="%{imageFilePath}" />											
+									<s:param name="imageFileName" value="%{imageFileName}" />
+									<s:param name="itemPrice" value="%{itemPrice}"/>			
+									</s:url>'>
+									
+									<img src='<s:property value="%{imageFilePath}"/>' width="150">
+								</a>
+								</div>
 							</div>
 					</s:form>
 				</s:iterator>
